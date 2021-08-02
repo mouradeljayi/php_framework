@@ -1,0 +1,15 @@
+{
+    "name": "utente/php_framework",
+    "authors": [
+        {
+            "name": "Mourad EL Jayi",
+            "email": "mouradeljayi98@gmail.com"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "app\\": "./"
+      }
+    },
+    "require": {}
+}
