@@ -1,30 +1,39 @@
 <?php
 
 namespace app\controllers;
+use app\core\Controller;
 use app\core\Application;
+use app\core\Request;
+
 
 /**
  * Class SiteController
  */
-class SiteController
+class SiteController extends Controller
 {
 
   public function home()
   {
     $params = [
-      'name' => "MVCFRAME",
+      'name' => "Mourad EL Jayi",
     ];
 
-    return Application::$app->router->renderView('home', $params);
+    return $this->render('home', $params);
   }
 
   public function contact()
   {
-    return Application::$app->router->renderView('contact');
+    return $this->render('contact');
   }
 
-  public function handleContact()
+  public function handleContact(Request $request)
   {
+    $body = $request->getBody();
+
+    echo "<pre>";
+    var_dump($body);
+    echo "</pre>";
+    exit;
     return "Hello data from controller";
   }
 }
