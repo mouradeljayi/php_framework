@@ -13,6 +13,18 @@ class Router
   public Response $response;
   protected array $routes = [];
 
+  /*
+  $routes = [
+    'get' => [
+      '/' => $callback,
+      '/contact' => $callback,
+    ],
+    'post' => [
+      '/submitdata' => $callback,
+    ]
+  ];
+  */
+  
   public function __construct(Request $request, Response $response)
   {
     $this->request = $request;

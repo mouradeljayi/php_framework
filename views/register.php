@@ -5,8 +5,12 @@
     <div class="col-md-6">
       <form action="" method="post">
         <div class="mb-3">
-          <label>Name</label>
-          <input type="text" name="name" class="form-control">
+          <label>Firstname</label>
+          <input type="text" name="firstname" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label>Lastname</label>
+          <input type="text" name="lastname" class="form-control">
         </div>
         <div class="mb-3">
           <label>email</label>
@@ -18,7 +22,7 @@
         </div>
         <div class="mb-3">
           <label>confirm password</label>
-          <input type="password" name="confirm_password" class="form-control">
+          <input type="password" name="confirmPassword" class="form-control">
         </div>
         <button type="submit" class="btn btn-primary">register</button>
       </form>
