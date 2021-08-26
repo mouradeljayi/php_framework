@@ -2,6 +2,7 @@
 namespace app\controllers;
 use app\core\Request;
 use app\core\Controller;
+use app\core\Application;
 use app\models\User;
 
 /**
@@ -22,10 +23,13 @@ class AuthController extends Controller
     $user = new User();
 
     if ($request->isPost()) {
+
       $user->loadData($request->getBody());
 
       if($user->validate() && $user->save()) {
-        return "Success";
+        Application::$app->session->setFlash('success', 'You have registerd successfuly');
+        Application::$app->response->redirect('/');
+        exit;
       }
 
       return $this->render('register', [
