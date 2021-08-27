@@ -1,3 +1,9 @@
+<?php
+
+/** @var $model \app\models\User */
+
+ ?>
+
 <h1 class="mt-5">Create an account</h1>
 
 <div class="row justify-content-center">
